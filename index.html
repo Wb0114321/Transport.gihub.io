@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vehicle Data Entry</title>
+        <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h2 class="text-center">Vehicle Data Entry</h2>
+            <form method="post" enctype="multipart/form-data" action="http://127.0.0.1:5000/upload">
+                <div class="form-group">
+                    <label for="vehicleNumber">Vehicle Number:</label>
+                    <input type="text" class="form-control" id="vehicleNumber" name="vehicleNumber" required="">
+                </div>
+                <div class="form-group">
+                    <label for="unladenWeight">Unladen Weight:</label>
+                    <input type="text" class="form-control" id="unladenWeight" name="unladenWeight" required="">
+                </div>
+                <div class="form-group">
+                    <label for="loadenWeight">Loaden Weight:</label>
+                    <input type="text" class="form-control" id="loadenWeight" name="loadenWeight" required="">
+                </div>
+                <div class="form-group">
+                    <label for="insuranceExpiry">Insurance Expiry Date:</label>
+                    <input type="date" class="form-control" id="insuranceExpiry" name="insuranceExpiry" required="">
+                </div>
+                <div class="form-group">
+                    <label for="fitnessExpiry">Fitness Expiry Date:</label>
+                    <input type="date" class="form-control" id="fitnessExpiry" name="fitnessExpiry" required="">
+                </div>
+                <div class="form-group">
+                    <label for="pollutionExpiry">Pollution Expiry Date:</label>
+                    <input type="date" class="form-control" id="pollutionExpiry" name="pollutionExpiry" required="">
+                </div>
+                <div class="form-group">
+                    <label for="permitExpiry">Permit Expiry Date:</label>
+                    <input type="date" class="form-control" id="permitExpiry" name="permitExpiry" required="">
+                </div>
+                <div class="form-group">
+                    <label for="pdfFile">Upload PDF (max 5MB):</label>
+                    <input type="file" class="form-control-file" id="pdfFile" name="pdfFile" accept="application/pdf" required="">
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Submit</button>
+                
+            </form>
+
+            <h2 class="text-center mt-5">Generate Report</h2>
+            <form method="get" action="http://127.0.0.1:5000/report">
+                <div class="form-group">
+                    <label for="reportVehicleNumber">Vehicle Number:</label>
+                    <input type="text" class="form-control" id="reportVehicleNumber" name="vehicleNumber" required="">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Generate Report</button>
+            </form>
+        </div>
+    
+    
+    </body></html>
